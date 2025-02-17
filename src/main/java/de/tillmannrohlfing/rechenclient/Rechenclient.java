@@ -5,7 +5,7 @@ import util.network.Client;
 public class Rechenclient extends Client {
     public Rechenclient(String IP, int port) {
         super(IP, port);
-        sendMsg("Hello World");
+        sendMsg("SUM 4 5 6 7 9 4 2 3 4 5 6 7 8");
     }
 
     @Override
@@ -20,5 +20,9 @@ public class Rechenclient extends Client {
 
     public void closeConnection() {
         close();
+    }
+
+    public static void main(String[] args) {
+        Rechenclient client = new Rechenclient("localhost", 143);
     }
 }
