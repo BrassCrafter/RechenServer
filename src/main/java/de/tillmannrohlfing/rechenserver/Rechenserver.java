@@ -45,7 +45,23 @@ public class Rechenserver extends Server{
                     send(pClientIP, pClientPort, pMessage+" = " + (sum));
                     break;
                 case "MIN":
-                    //send(pClientIP, pClientPort, pMessage + " = " + );
+                    int pivotMIN = numbers[0];
+                    for(int i=1; i<numbers.length;i++){
+                        if(numbers[i]<pivotMIN){
+                            pivotMIN = numbers[i];
+                        }
+                    }
+                    send(pClientIP, pClientPort, pMessage+" = " + (pivotMIN));
+                    break;
+                case "MAX":
+                    int pivotMAX = numbers[0];
+                    for(int i=1; i<numbers.length;i++){
+                        if(numbers[i]>pivotMAX){
+                            pivotMAX = numbers[i];
+                        }
+                    }
+                    send(pClientIP, pClientPort, pMessage+" = " + (pivotMAX));
+                    break;
                 default:
                     send(pClientIP, pClientPort, pMessage + " kenn ich nicht!");
             }

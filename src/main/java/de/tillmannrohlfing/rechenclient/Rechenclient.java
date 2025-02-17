@@ -5,7 +5,7 @@ import util.network.Client;
 public class Rechenclient extends Client {
     public Rechenclient(String IP, int port) {
         super(IP, port);
-        sendMsg("SUM 4 5 6 7 9 4 2 3 4 5 6 7 8");
+        sendMsg("MAX 4 5 6 7 9 4 2 3 4 5 6 7 8");
     }
 
     @Override
